@@ -1,72 +1,72 @@
 # 프로젝트 구조
 ## 폴더  
-  frontend/
-  │
-  ├── public/                      # 정적 파일을 포함 (index.html, 이미지, favicon 등)
-  │   ├── index.html               # HTML 템플릿
-  │   └── assets/                  # 이미지, 폰트, 아이콘 등의 정적 리소스
-  │
-  ├── src/                         # 소스 파일이 위치하는 폴더
-  │   ├── api/                     # API 호출 관련 로직 (예: Axios)
-  │   │   ├── auth.js              # 인증 관련 API
-  │   │   ├── users.js             # 사용자 관련 API
-  │   │   └── index.js             # API 호출 모듈 진입점
-  │   │
-  │   ├── components/              # 재사용 가능한 UI 컴포넌트
-  │   │   ├── Button/              # 버튼 컴포넌트
-  │   │   │   ├── Button.jsx
-  │   │   │   ├── Button.css
-  │   │   │   └── index.js         # 컴포넌트의 엔트리 포인트
-  │   │   └── Header/              # 헤더 컴포넌트
-  │   │       ├── Header.jsx
-  │   │       ├── Header.css
-  │   │       └── index.js
-  │   │
-  │   ├── hooks/                   # 커스텀 훅 관리
-  │   │   ├── useAuth.js           # 인증 관련 커스텀 훅
-  │   │   ├── useFetch.js          # API 호출 관련 커스텀 훅
-  │   │   └── index.js
-  │   │
-  │   ├── pages/                   # 각 페이지별 컴포넌트
-  │   │   ├── Home/                # 홈 페이지
-  │   │   │   ├── Home.jsx
-  │   │   │   └── Home.css
-  │   │   ├── Login/               # 로그인 페이지
-  │   │   │   ├── Login.jsx
-  │   │   │   └── Login.css
-  │   │   └── Dashboard/           # 대시보드 페이지
-  │   │       ├── Dashboard.jsx
-  │   │       └── Dashboard.css
-  │   │
-  │   ├── services/                # 비즈니스 로직 관리
-  │   │   ├── authService.js       # 인증 서비스
-  │   │   ├── userService.js       # 사용자 서비스
-  │   │   └── index.js
-  │   │
-  │   ├── store/                   # 상태 관리 (예: Redux 또는 Context API)
-  │   │   ├── slices/              # Redux 슬라이스
-  │   │   │   ├── authSlice.js     # 인증 상태 관리
-  │   │   │   └── userSlice.js     # 사용자 상태 관리
-  │   │   ├── store.js             # Redux 스토어 설정
-  │   │   └── index.js
-  │   │
-  │   ├── styles/                  # 전역 스타일 관리
-  │   │   ├── global.css           # 전역 CSS
-  │   │   └── variables.css        # CSS 변수 (색상, 폰트 등)
-  │   │
-  │   ├── utils/                   # 유틸리티 함수 모음
-  │   │   ├── helpers.js           # 헬퍼 함수
-  │   │   ├── validators.js        # 입력 검증 함수
-  │   │   └── index.js
-  │   │
-  │   ├── App.jsx                  # 최상위 React 컴포넌트
-  │   ├── index.js                 # ReactDOM 진입점
-  │   └── setupTests.js            # 테스트 환경 설정
-  │
-  ├── .env                         # 환경 변수 설정 파일
-  ├── package.json                 # 프로젝트 의존성 관리
-  ├── webpack.config.js            # Webpack 설정 파일 (필요 시)
-  └── README.md                    # 프로젝트 설명
+    frontend/
+    │
+    ├── public/                      # 정적 파일을 포함 (index.html, 이미지, favicon 등)
+    │   ├── index.html               # HTML 템플릿
+    │   └── assets/                  # 이미지, 폰트, 아이콘 등의 정적 리소스
+    │
+    ├── src/                         # 소스 파일이 위치하는 폴더
+    │   ├── api/                     # API 호출 관련 로직 (예: Axios)
+    │   │   ├── auth.js              # 인증 관련 API
+    │   │   ├── users.js             # 사용자 관련 API
+    │   │   └── index.js             # API 호출 모듈 진입점
+    │   │
+    │   ├── components/              # 재사용 가능한 UI 컴포넌트
+    │   │   ├── Button/              # 버튼 컴포넌트
+    │   │   │   ├── Button.jsx
+    │   │   │   ├── Button.css
+    │   │   │   └── index.js         # 컴포넌트의 엔트리 포인트
+    │   │   └── Header/              # 헤더 컴포넌트
+    │   │       ├── Header.jsx
+    │   │       ├── Header.css
+    │   │       └── index.js
+    │   │
+    │   ├── hooks/                   # 커스텀 훅 관리
+    │   │   ├── useAuth.js           # 인증 관련 커스텀 훅
+    │   │   ├── useFetch.js          # API 호출 관련 커스텀 훅
+    │   │   └── index.js
+    │   │
+    │   ├── pages/                   # 각 페이지별 컴포넌트
+    │   │   ├── Home/                # 홈 페이지
+    │   │   │   ├── Home.jsx
+    │   │   │   └── Home.css
+    │   │   ├── Login/               # 로그인 페이지
+    │   │   │   ├── Login.jsx
+    │   │   │   └── Login.css
+    │   │   └── Dashboard/           # 대시보드 페이지
+    │   │       ├── Dashboard.jsx
+    │   │       └── Dashboard.css
+    │   │
+    │   ├── services/                # 비즈니스 로직 관리
+    │   │   ├── authService.js       # 인증 서비스
+    │   │   ├── userService.js       # 사용자 서비스
+    │   │   └── index.js
+    │   │
+    │   ├── store/                   # 상태 관리 (예: Redux 또는 Context API)
+    │   │   ├── slices/              # Redux 슬라이스
+    │   │   │   ├── authSlice.js     # 인증 상태 관리
+    │   │   │   └── userSlice.js     # 사용자 상태 관리
+    │   │   ├── store.js             # Redux 스토어 설정
+    │   │   └── index.js
+    │   │
+    │   ├── styles/                  # 전역 스타일 관리
+    │   │   ├── global.css           # 전역 CSS
+    │   │   └── variables.css        # CSS 변수 (색상, 폰트 등)
+    │   │
+    │   ├── utils/                   # 유틸리티 함수 모음
+    │   │   ├── helpers.js           # 헬퍼 함수
+    │   │   ├── validators.js        # 입력 검증 함수
+    │   │   └── index.js
+    │   │
+    │   ├── App.jsx                  # 최상위 React 컴포넌트
+    │   ├── index.js                 # ReactDOM 진입점
+    │   └── setupTests.js            # 테스트 환경 설정
+    │
+    ├── .env                         # 환경 변수 설정 파일
+    ├── package.json                 # 프로젝트 의존성 관리
+    ├── webpack.config.js            # Webpack 설정 파일 (필요 시)
+    └── README.md                    # 프로젝트 설명
 
 ## 설명
  - public: 정적 파일을 저장하는 곳으로, index.html 파일과 정적 리소스들이 위치합니다.
