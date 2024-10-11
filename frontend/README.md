@@ -1,4 +1,5 @@
 # 프로젝트 구조
+## 폴더  
   frontend/
   │
   ├── public/                      # 정적 파일을 포함 (index.html, 이미지, favicon 등)
