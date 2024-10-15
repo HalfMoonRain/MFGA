@@ -16,7 +16,7 @@ def root():
 
 
 @app.get("/calculate", summary="현재가치 계산")
-def calculate(FV: float, n: int, R: float, YTM: float payment_frequency: int):
+def calculate(FV: float, n: int, R: float, YTM: float, payment_frequency: int):
     """
     # 이자의 연금현재가치계산과 원금의 현재가치계산을 합계하여 채권의 현재가치 출력
     """
@@ -28,16 +28,16 @@ def calculate(FV: float, n: int, R: float, YTM: float payment_frequency: int):
     principal = calculate_fv_single(FV, adjusted_YTM, total_periods)
     return {"interest : " : interest, "principal : " : principal, "total : " : interest + principal}
 
-def calculate_sum_fv_r(FV, R, YTM, periods):
+def calculate_sum_fv_r(FV, adjusted_R, adjusted_YTM, periods):
     """
-    ∑(FV * R) / (1 + YTM)^i for i in range 1 to periods
+    ∑(FV * adjusted_R) / (1 + adjusted_YTM)^i for i in range 1 to periods
     """
-    sum_value = sum((FV * R) / (1 + YTM)**i for i in range(1, periods + 1))
+    sum_value = sum((FV * adjusted_R) / (1 + adjusted_YTM)**i for i in range(1, periods + 1))
     return sum_value
 
-def calculate_fv_single(FV, YTM, periods):
+def calculate_fv_single(FV, adjusted_YTM, periods):
     """
-    FV / (1 + YTM)^periods
+    FV / (1 + adjusted_YTM)^periods
     """
-    value = FV / (1 + YTM)**periods
+    value = FV / (1 + adjusted_YTM)**periods
     return value
